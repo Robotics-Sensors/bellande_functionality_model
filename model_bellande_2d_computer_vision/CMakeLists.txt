@@ -14,7 +14,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 cmake_minimum_required(VERSION 3.8)
-project(ros_bellande_3d_computer_vision_models)
+project(model_bellande_2d_computer_vision)
 
 # Find ROS
 if($ENV{ROS_VERSION} EQUAL 1)
@@ -33,12 +33,12 @@ if($ENV{ROS_VERSION} EQUAL 1)
   
   catkin_install_python(
     PROGRAMS
-    src/bellande_3d_computer_vision_api.py
+    src/bellande_2d_computer_vision_api.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   )
   
   install(
-    PROGRAMS src/bellande_3d_computer_vision_api.py
+    PROGRAMS src/bellande_2d_computer_vision_api.py
     DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   )
   
@@ -58,8 +58,9 @@ else()
   find_package(rclcpp REQUIRED)
   find_package(rclpy REQUIRED)
   
+  
   install(
-    PROGRAMS src/bellande_3d_computer_vision_api.py
+    PROGRAMS src/bellande_2d_computer_vision_api.py
     DESTINATION lib/${PROJECT_NAME}
   )
   
